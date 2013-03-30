@@ -1,0 +1,7 @@
+= provide(:title, current_user.name)
+
+%div.container
+  %h1
+    This is the home page for
+    = link_to current_user.name, current_user
+    %h2= current_user.email
