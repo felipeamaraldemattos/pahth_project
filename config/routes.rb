@@ -5,6 +5,11 @@ PahthsProject::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
 
   resources :users
+  match '/signup',  to: 'users#new'
+
+  resource :user_sessions, only: [:new, :create, :destroy]
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
 
 
   # The priority is based upon order of creation:
