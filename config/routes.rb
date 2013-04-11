@@ -1,15 +1,24 @@
 PahthsProject::Application.routes.draw do
 
+  # root
   root to: 'static_pages#home'
 
+
+  # static pages
   match '/about',   to: 'static_pages#about'
 
+  # user controller
   resources :users
   match '/signup',  to: 'users#new'
 
+
+  # user_session controller
   resource :user_sessions, only: [:new, :create, :destroy]
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  #pahths controller
+  resources :pahths
 
 
   # The priority is based upon order of creation:

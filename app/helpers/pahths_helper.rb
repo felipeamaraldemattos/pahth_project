@@ -1,0 +1,2 @@
+module PahthsHelper
+end

@@ -65,6 +65,20 @@ describe "Authentication" do
 
       end
 
+      describe "in the pahths controller" do
+
+        describe "submitting to the create action" do
+          before { post pahths_path }
+          specify { response.should redirect_to(login_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete pahth_path(FactoryGirl.create(:pahth)) }
+          specify { response.should redirect_to(login_path) }
+        end
+
+      end
+
 
       describe "as wrong user" do
         let(:user) { FactoryGirl.create(:user) }
@@ -81,18 +95,10 @@ describe "Authentication" do
           specify { response.should redirect_to(login_path) }
         end
 
-
       end
-
 
     end
 
-
   end
-
-
-
-
-
 
 end
