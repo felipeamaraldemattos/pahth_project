@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130331173027) do
+ActiveRecord::Schema.define(:version => 20130412190713) do
+
+  create_table "p_steps", :force => true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "type_learning"
+    t.string   "category_knowledge"
+    t.integer  "pahth_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "pahths", :force => true do |t|
     t.string   "title"

@@ -79,6 +79,16 @@ describe "Authentication" do
 
       end
 
+      describe "in the PStep controller" do
+
+        describe "submitting to the create action" do
+          before { post pahth_p_steps_path(FactoryGirl.create(:p_step)) }
+          specify { response.should redirect_to(login_path) }
+        end
+
+
+      end
+
 
       describe "as wrong user" do
         let(:user) { FactoryGirl.create(:user) }

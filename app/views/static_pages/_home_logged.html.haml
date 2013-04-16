@@ -1,15 +1,8 @@
 = provide(:title, current_user.name)
 
 %div.container
-  %h1
-    This is the home page for
-    = link_to current_user.name, current_user
-    %h2= current_user.email
-
-  %div.container.center= link_to "Create Pahth", new_pahth_path, class: "btn btn-large btn-primary"
-
-  %div.span8
-    %h3 Micropost Feed
+    %h1 Suggested Paths
     = render 'shared/pahths_feed'
+
 
 

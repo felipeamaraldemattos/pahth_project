@@ -2,7 +2,7 @@
 - if object.errors.any?
   %div.error_explanation
     %div.alert.alert-error
-      The forms contains
+      The form contains
       = pluralize(object.errors.count, "error")
     %ul
       -object.errors.full_messages.each do |msg|

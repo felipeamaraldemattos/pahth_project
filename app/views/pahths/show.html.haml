@@ -1,8 +1,18 @@
 = provide(:title, @pahth.title)
 
 %div.container
-  %h1
-    = @pahth.title
-    %h2
-      = @pahth.pahth_tipo
-      %h4.center= @pahth.description
+
+  %section.center.beauty-blue
+    %h1
+      = @pahth.title
+      %h2
+        = @pahth.pahth_tipo
+        %h4.center
+
+
+  %div.half-split-left.semi-tall.top-margin
+    %h1 To Dos
+
+  %div.half-split-right.semi-tall.top-margin
+    %h3 Steps Feed
+    = render 'shared/p_steps_feed'

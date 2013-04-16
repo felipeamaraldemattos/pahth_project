@@ -1,0 +1,7 @@
+%li
+  %span.content.center=  link_to teaching_pahths_feed_item.title, build_pahth_path(teaching_pahths_feed_item),
+  class: "btn"
+  - if current_user?(teaching_pahths_feed_item.user)
+    %div.center= link_to "delete", teaching_pahths_feed_item, method: :delete,
+    data: { confirm: "You sure?" }, title: teaching_pahths_feed_item.content
+

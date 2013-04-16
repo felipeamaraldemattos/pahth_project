@@ -1,0 +1,34 @@
+-# Build a Path by adding steps
+
+= provide(:title, "#{@pahth.title} | Build")
+
+%div.container
+
+  %section.center.beauty-blue
+    %h1
+      = @pahth.title
+      %h2
+        = @pahth.pahth_tipo
+        %h4.center
+
+
+  %div.half-split-left.semi-tall.top-margin.styled-select
+    = form_for([@pahth, @p_step]) do |f|
+
+      = render 'shared/error_messages', object: f.object
+
+      = f.label :title
+      = f.text_field :title
+
+      = f.label :learning_style
+      = f.select :type_learning, learning_types_array, :prompt => 'Select One'
+
+
+      = f.label :description
+      = f.text_area :content, :rows => 5
+
+      = f.submit "Create Step", class: "btn btn-large btn-primary"
+
+  %div.half-split-right.semi-tall.top-margin
+    %h3 Steps Feed
+    = render 'shared/p_steps_feed'

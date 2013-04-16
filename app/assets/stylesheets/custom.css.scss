@@ -63,6 +63,7 @@ p {
 }
 
 
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -265,26 +266,83 @@ aside {
 
 /* home */
 
-.float_left_home {
+.half-split-left {
   float:left;
-  height:300px;
   width:42%;
   margin:auto;
-  text-align:center;
-  background-color: $beauty_blue3;
   padding: 30px;
   vertical-align: middle;
+  overflow:auto;
 }
 
-.float_right_home {
+.half-split-right {
   float:right;
-  height:300px;
   width:42%;
   margin:auto;
-  text-align:center;
-  background-color: $beauty_blue3;
   padding: 30px;
+  overflow:auto;
+}
+
+.beauty-blue {
+  background-color: $beauty_blue3;
+  }
+
+.text-center{
+  text-align:center;
+}
+
+.bold{
+  font-weight:bold;
+}
+
+.semi-tall {
+  height:550px;
+}
+
+.add-steps {
+  text-align: center;
+  width: 70%;
+}
+
+.top-margin{
+  margin-top:30px;
+}
+
+.float-right{
+  text-align: right;
+}
+
+/* Select boxes */
+
+.styled-select select {
+  background: transparent;
+  width: 100%;
+  padding: 5px;
+  line-height: 1;
+  height: 34px;
+  -webkit-appearance: none;
+}
+
+/* Navbar aside */
+
+.left-menu{
+  position: absolute;
+  left:15px;
+  top:120px;
+  font-size: 1.3em;
+  padding-top: 50px;
+  padding-left: 20px;
+  float: left;
+  width: 20%;
+  .nav-header{
+    font-size: 1.0em;
+  }
+
 }
 
 
-
+.main-position{
+  position: absolute;
+  left:250px;
+  top:150px;
+}

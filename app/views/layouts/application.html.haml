@@ -13,7 +13,9 @@
 
       = render 'layouts/header'
 
-      %div.container
+      =render 'layouts/nav_list'
+
+      %div.container.main-position
 
          - flash.each do |key, value|
             %div{:class=> "alert alert-#{key}"}= value

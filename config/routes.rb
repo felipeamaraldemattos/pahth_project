@@ -7,8 +7,14 @@ PahthsProject::Application.routes.draw do
   # static pages
   match '/about',   to: 'static_pages#about'
 
-  # user controller
-  resources :users
+  # User controller
+  # Manage manages all Paths created by User
+  resources :users do
+    member do
+      get :manage_pahths
+    end
+  end
+
   match '/signup',  to: 'users#new'
 
 
@@ -18,7 +24,19 @@ PahthsProject::Application.routes.draw do
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
   #pahths controller
-  resources :pahths
+  # Build builds the Path by adding Steps
+
+
+  resources :pahths do
+
+    resources :p_steps
+
+    member do
+      get :build
+    end
+
+  end
+
 
 
   # The priority is based upon order of creation:
