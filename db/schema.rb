@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412190713) do
+ActiveRecord::Schema.define(:version => 20130417033206) do
 
   create_table "p_steps", :force => true do |t|
     t.string   "title"
     t.string   "content"
     t.string   "type_learning"
     t.string   "category_knowledge"
-    t.integer  "pahth_id"
+    t.integer  "user_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(:version => 20130412190713) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "step_pahths", :force => true do |t|
+    t.integer  "pahth_id"
+    t.integer  "p_step_id"
+    t.integer  "times_taken"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "step_pahths", ["p_step_id"], :name => "index_step_pahths_on_p_step_id"
+  add_index "step_pahths", ["pahth_id", "p_step_id"], :name => "index_step_pahths_on_pahth_id_and_p_step_id", :unique => true
+  add_index "step_pahths", ["pahth_id"], :name => "index_step_pahths_on_pahth_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

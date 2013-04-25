@@ -5,7 +5,7 @@ class CreatePSteps < ActiveRecord::Migration
       t.string :content
       t.string :type_learning
       t.string :category_knowledge
-      t.integer :pahth_id
+      t.integer :user_id
 
       t.timestamps
     end

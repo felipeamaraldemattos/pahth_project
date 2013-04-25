@@ -3,9 +3,12 @@
 
 /* variables */
 
+$beauty_blue0: #1826b0;
 $beauty_blue1: #4a96f2;
-$beauty_blue2: #a3d1d1;
+$beauty_blue2: #B2E8F2;
+$beauty_blue2: #B2E8F2;
 $beauty_blue3: #e8f9ff;
+$beauty_blue4: #A2DCEA;
 
 
 /* universal */
@@ -145,11 +148,14 @@ input {
   float: left;
   margin-right: 10px;
   font-size: 2.7em;
+  font-family: "Times New Roman";
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-  a {color: #ffffff;}
+  a {
+    color: #ffffff;
+  }
   &:hover {
     color: #fff;
     text-decoration: none;
@@ -264,6 +270,7 @@ aside {
   }
 }
 
+
 /* home */
 
 .half-split-left {
@@ -285,7 +292,7 @@ aside {
 
 .beauty-blue {
   background-color: $beauty_blue3;
-  }
+}
 
 .text-center{
   text-align:center;
@@ -296,7 +303,7 @@ aside {
 }
 
 .semi-tall {
-  height:550px;
+  height:600px;
 }
 
 .add-steps {
@@ -312,6 +319,22 @@ aside {
   text-align: right;
 }
 
+.color-blue0{
+  color: $beauty_blue0;
+}
+
+.color-blue1{
+  color: $beauty_blue1;
+}
+
+.color-blue2{
+  color: $beauty_blue2;
+}
+
+.color-blue3{
+  color: $beauty_blue3;
+}
+
 /* Select boxes */
 
 .styled-select select {
@@ -322,6 +345,7 @@ aside {
   height: 34px;
   -webkit-appearance: none;
 }
+
 
 /* Navbar aside */
 

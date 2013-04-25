@@ -13,7 +13,9 @@
 
       = render 'layouts/header'
 
-      =render 'layouts/nav_list'
+
+      - if current_user
+         =render 'layouts/nav_list'
 
       %div.container.main-position
 

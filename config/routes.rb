@@ -26,18 +26,15 @@ PahthsProject::Application.routes.draw do
   #pahths controller
   # Build builds the Path by adding Steps
 
-
   resources :pahths do
-
-    resources :p_steps
-
     member do
-      get :build
+      get :build_new
+      post :build_create
     end
-
   end
 
-
+  #PStep not nested in a pahth anymore to become easier for user to create
+  resources :p_steps
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

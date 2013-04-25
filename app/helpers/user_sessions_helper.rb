@@ -35,10 +35,8 @@ module UserSessionsHelper
     session[:return_to] = request.url
   end
 
-  def pahth
-    @pahth ||= Pahth.find_by_id(params[:pahth_id])
+  def current_pahth
+    @pahth ||= Pahth.find_by_id(params[:id])
   end
-
-
 
 end

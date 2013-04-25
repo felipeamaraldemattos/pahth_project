@@ -1,10 +1,11 @@
 class Pahth < ActiveRecord::Base
   attr_accessible :title, :description, :pahth_tipo, :content
+
   belongs_to :user
 
-  has_many :p_steps, dependent: :destroy
+  has_many :step_pahths, dependent: :destroy
+  has_many :p_steps, :through => :step_pahths
 
-  accepts_nested_attributes_for :p_steps
 
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 20 }
@@ -13,10 +14,5 @@ class Pahth < ActiveRecord::Base
 
   default_scope order: 'pahths.created_at DESC'
 
-
-  def p_steps_feed
-    self.reload
-    self.p_steps
-  end
 
 end

@@ -2,8 +2,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation
 
   has_many :pahths, dependent: :destroy
+  has_many :p_steps, dependent: :destroy
 
-  accepts_nested_attributes_for :pahths
+  accepts_nested_attributes_for :pahths, :p_steps
 
   acts_as_authentic
 
@@ -24,9 +25,9 @@ class User < ActiveRecord::Base
     Pahth.all
   end
 
-
-
-
-
+  def p_steps_feed
+    self.reload
+    self.p_steps
+  end
 
 end

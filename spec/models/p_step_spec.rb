@@ -54,7 +54,7 @@ describe PStep do
   describe "accessible attributes" do
     it "should not allow access to pahth_id" do
       expect do
-        PStep.new(pahth_id: pahth.id)
+        PStep.new(user_id: pahth.id)
       end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
     end
   end
