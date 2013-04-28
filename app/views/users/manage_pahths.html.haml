@@ -2,6 +2,9 @@
 
 = provide(:title, "#{@current_user.name} | Teaching Paths")
 
-%div.container
-    %h1 Manage your Teaching Paths
-    = render 'shared/teaching_pahths_feed'
+%section.grid_5
+  %h1 Manage your Teaching Paths
+  - if @pahths_feed_items.any?
+    = render partial: 'shared/pahths_feed_item', collection: @pahths_feed_items
+
+%section.grid_2.push_3.to-dos= to_do_list

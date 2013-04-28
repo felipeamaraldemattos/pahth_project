@@ -8,8 +8,8 @@ class Pahth < ActiveRecord::Base
 
 
   validates :user_id, presence: true
-  validates :title, presence: true, length: { maximum: 20 }
-  validates :pahth_tipo, presence: true, length: { maximum: 20 }
+  validates :title, presence: true, length: { maximum: 50 }
+  validates :pahth_tipo, presence: true, length: { maximum: 50 }
   validates :content, length: { maximum: 1000 }
 
   default_scope order: 'pahths.created_at DESC'

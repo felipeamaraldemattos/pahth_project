@@ -1,17 +1,19 @@
-%header.navbar.navbar-fixed-top.navbar-inverse
-  %div.navbar-inner
-    %div.container
-      %p#logo
-        %a{:href => root_path}<
-          %span> learn
-          %span.color-blue2 paths
-        %nav
-          %ul.nav.pull-right
-            - if current_user
-              %li= link_to "Edit Profile", edit_user_path(current_user.id)
-              %li= link_to "Log Out", :logout
-            - else
-              %li= link_to "Sign Up", new_user_path
-              %li= link_to "Log In", :login
+%header
+
+  %div.container_12
+
+    %div.grid_2#logo
+      %a{:href => root_path}<
+        %span> learn
+        %span.blue-2 paths
+
+    %div.grid_3.push_7
+      %nav.nav-header
+        %ul
+          - if current_user
+            %li= link_to "Edit Profile", edit_user_path(current_user.id)
+            %li= link_to "Log Out", :logout
+          - else
+            %li= link_to "Log In", :login
 
 

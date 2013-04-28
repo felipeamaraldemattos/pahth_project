@@ -1,30 +1,39 @@
 !!! 5
 %html
-   %head
-      %title= full_title(yield(:title))
-      %link(rel="shortcut icon" href="/favicon.ico/")
-      = stylesheet_link_tag    "application", :media => "all"
-      = javascript_include_tag "application"
-      = csrf_meta_tags
+  %head
+    %title= full_title(yield(:title))
+    %link(rel="shortcut icon" href="/favicon.ico/")
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
 
-      = render 'layouts/shim'
+    = render 'layouts/shim'
 
-   %body.homepage
+  %body
 
-      = render 'layouts/header'
+    = render 'layouts/header'
 
+    %div.wrapper
 
-      - if current_user
-         =render 'layouts/nav_list'
-
-      %div.container.main-position
-
-         - flash.each do |key, value|
+      %div.container_12
+        %div.grid_9.push_2
+          - flash.each do |key, value|
             %div{:class=> "alert alert-#{key}"}= value
 
-         = yield
+      %div.container_12
+        - if current_user
+          %div.grid_2.omega
+            =render 'layouts/nav_list'
 
-         = render 'layouts/footer'
+          = yield
 
-         = debug(params) if Rails.env.development?
+        - else
+          = yield
+
+      %footer.container_12
+        = render 'layouts/footer'
+
+      %div.container_12
+        %div.grid_6.push_3.control-development
+          = debug(params) if Rails.env.development?
 

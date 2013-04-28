@@ -1,0 +1,366 @@
+/* This was edited by Felipe Mattos to transform 960
+into a 100% relative grid system
+*/
+
+
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+
+
+*/
+
+
+
+/* `Container
+----------------------------------------------------------------------------------------------------*/
+
+.container_12p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  text-align: left ;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1p,
+.grid_2p,
+.grid_3p,
+.grid_4p,
+.grid_5p,
+.grid_6p,
+.grid_7p,
+.grid_8p,
+.grid_9p,
+.grid_10p,
+.grid_11p,
+.grid_12p {
+  display: inline;
+  float: left;
+  margin-left: 1.0416%;
+  margin-right: 1.0416%;
+  height: inherit;
+  text-align: left;
+}
+
+.push_1p, .pull_1p,
+.push_2p, .pull_2p,
+.push_3p, .pull_3p,
+.push_4p, .pull_4p,
+.push_5p, .pull_5p,
+.push_6p, .pull_6p,
+.push_7p, .pull_7p,
+.push_8p, .pull_8p,
+.push_9p, .pull_9p,
+.push_10p, .pull_10p,
+.push_11p, .pull_11p {
+  position: relative;
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+  margin-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+}
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12p .grid_1p {
+  width: 6.250%;
+}
+
+.container_12p .grid_2p {
+  width: 14.583%;
+}
+
+.container_12p .grid_3p {
+  width: 22.917%;
+}
+
+.container_12p .grid_4p {
+  width: 31.250%;
+}
+
+.container_12p .grid_5p {
+  width: 39.583%;
+}
+
+.container_12p .grid_6p {
+  width: 47.917%;
+}
+
+.container_12p .grid_7p {
+  width: 56.250%;
+}
+
+.container_12p .grid_8p {
+  width: 64.583%;
+}
+
+.container_12p .grid_9p {
+  width: 72.917%;
+}
+
+.container_12p .grid_10p {
+  width: 81.250%;
+}
+
+.container_12p .grid_11p {
+  width: 89.583%;
+}
+
+.container_12p .grid_12p {
+  width: 97.917%;
+}
+
+/* `Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12p .prefix_1p {
+  padding-left: 8.333%;
+}
+
+.container_12p .prefix_2p {
+  padding-left: 160px;
+}
+
+.container_12p .prefix_3p {
+  padding-left: 240px;
+}
+
+.container_12p .prefix_4p {
+  padding-left: 320px;
+}
+
+.container_12p .prefix_5p {
+  padding-left: 400px;
+}
+
+.container_12p .prefix_6p {
+  padding-left: 480px;
+}
+
+.container_12p .prefix_7p {
+  padding-left: 560px;
+}
+
+.container_12p .prefix_8p {
+  padding-left: 640px;
+}
+
+.container_12 .prefix_9p {
+  padding-left: 720px;
+}
+
+.container_12 .prefix_10p {
+  padding-left: 800px;
+}
+
+.container_12 .prefix_11p {
+  padding-left: 880px;
+}
+
+/* `Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .suffix_1p {
+  padding-right: 8.333%;
+}
+
+.container_12 .suffix_2p {
+  padding-right: 16.667%;
+}
+
+.container_12 .suffix_3p {
+  padding-right:  25.000%;
+}
+
+.container_12 .suffix_4p {
+  padding-right: 33.333%;
+}
+
+.container_12p .suffix_5p {
+  padding-right: 41.667%;
+}
+
+.container_12p .suffix_6p {
+  padding-right: 50.000%;
+}
+
+.container_12p .suffix_7p {
+  padding-right: 58.333%;
+}
+
+.container_12p .suffix_8p {
+  padding-right: 66.667%;
+}
+
+.container_12p .suffix_9p {
+  padding-right: 75.000%;
+}
+
+.container_12p .suffix_10p {
+  padding-right: 83.333%;
+}
+
+.container_12p .suffix_11p {
+  padding-right: 91.667%;
+}
+
+/* `Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12p .push_1p {
+  left: 8.333%;
+}
+
+.container_12p .push_2p {
+  left: 16.667%
+}
+
+.container_12p .push_3p {
+  left:  25.000%;
+}
+
+.container_12p .push_4p {
+  left: 33.333%;
+}
+
+.container_12p .push_5p {
+  left: 41.667%;
+}
+
+.container_12p .push_6p {
+  left: 50.000%;
+}
+
+.container_12p .push_7p {
+  left: 58.333%;
+}
+
+.container_12p .push_8p {
+  left: 66.667%;
+}
+
+.container_12p .push_9p {
+  left: 75.000%;
+}
+
+.container_12p .push_10p {
+  left: 83.333%;
+}
+
+.container_12p .push_11p {
+  left: 91.667%;
+}
+
+/* `Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12p .pull_1p {
+  left: -8.333%;
+}
+
+.container_12p .pull_2p {
+  left: -16.667%;
+}
+
+.container_12p .pull_3p {
+  left: -25.000%;
+}
+
+.container_12p .pull_4p {
+  left: -33.333%;
+}
+
+.container_12p .pull_5p {
+  left: -41.667%;
+}
+
+.container_12p .pull_6p {
+  left: -50.000%;
+}
+
+.container_12p .pull_7p {
+  left: -58.333%;
+}
+
+.container_12p .pull_8p {
+  left: -66.667%;
+}
+
+.container_12p .pull_9p {
+  left: -75.000%;
+}
+
+.container_12p .pull_10p {
+  left: -83.333%;
+}
+
+.container_12p .pull_11p {
+  left: -91.667%;
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after,
+.container_12p:before,
+.container_12p:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.container_12p:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix,
+.container_12p {
+  zoom: 1;
+}

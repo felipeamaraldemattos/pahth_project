@@ -1,23 +1,32 @@
 = provide(:title, 'Sign up')
 
-%h1 Sign up
+= form_for(@user) do |f|
 
-%div.row
-  %div.span6.offset3
-    = form_for(@user) do |f|
+  %fieldset.grid_4.push_4
 
-      = render 'shared/error_messages', object: f.object
+    %legend Sign up
 
-      = f.label :name
-      = f.text_field :name
+    = render 'shared/error_messages', object: f.object
 
-      = f.label :email
-      = f.text_field :email
+    %section
 
-      = f.label :password
-      = f.password_field :password
+      %article
+        = f.label :name
+        = f.text_field :name
 
-      = f.label :password_confirmation, "Confirmation"
-      = f.password_field :password_confirmation
+      %article
+        = f.label :email
+        = f.text_field :email
 
-      = f.submit "Create my account", class: "btn btn-large btn-primary"
+      %article
+        = f.label :password
+        = f.password_field :password
+
+      %article
+        = f.label :password_confirmation, "Confirmation"
+        = f.password_field :password_confirmation
+
+      %article
+        = f.submit "Create my account", class: "btn-submit"
+
+

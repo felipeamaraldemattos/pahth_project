@@ -3,5 +3,6 @@ class ApplicationController < ActionController::Base
 
   include UserSessionsHelper
   include PahthsHelper
+  include StyleHelper
 
 end

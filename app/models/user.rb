@@ -20,14 +20,33 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
 
+  # paths suggested to user in home page
   def pahths_feed
     # temporary future should have smart way of suggesting pahths for user
     Pahth.all
   end
 
+  # steps suggested to user in home page
   def p_steps_feed
+    PStep.all
+  end
+
+  # steps user is signed to complete
+  def to_dos_feed
     self.reload
     self.p_steps
+  end
+
+  # user collection of steps created by user
+  def p_steps_user
+    self.reload
+    self.p_steps
+  end
+
+  # user collection of paths created by user
+  def pahths_user
+    self.reload
+    self.pahths
   end
 
 end

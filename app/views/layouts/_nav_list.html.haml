@@ -1,12 +1,13 @@
-%div.tabbable.tabs-left.left-menu
-  %ul.nav.nav-tabs
-    %li.nav-header Learn
-    %li= link_to "My Paths", '#'
-    %li= link_to "My Steps", '#'
-    %li.nav-header Teach
-    %li= link_to "Create Path", new_pahth_path
-    %li= link_to "Teaching Paths", manage_pahths_user_path(current_user)
-    %li= link_to "Teaching Steps", new_p_step_path
+%div.nav-menu
+  %ul
+    = nav_link "Home", root_path, "sub-menu border-hover"
+    %li.sub-menu Learn
+    = nav_link "My Paths", '#', "border-hover"
+    = nav_link "My Steps", '#', "border-hover"
+    %li.sub-menu Teach
+    = nav_link "Create Path", new_pahth_path, "border-hover"
+    = nav_link "Teaching Paths", manage_pahths_user_path(current_user),"border-hover"
+    = nav_link "Teaching Steps", new_p_step_path, "border-hover"
 
 
 

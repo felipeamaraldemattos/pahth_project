@@ -1,18 +1,16 @@
 
-%div.container
 
-  %div.half-split-left.beauty-blue.semi-tall
-    %iframe{:allowscriptaccess => "always", :allowFullScreen => "true",
-      :frameborder => "0", :height => "100%", :src => "http://www.youtube.com/embed/6vMO3XmNXe4",
-      :title => "YouTube video player", :width => "100%"}
+%div.grid_5.push_1.landing-box
+  %h1
+    Find the right learning path to master
+    %strong anything!
 
-  %div.half-split-right.beauty-blue.semi-tall.center
-    %br
-    %br
-    %h1
-      Welcome to Pahths
-      %h2 Find the right Pahth, to master anything!
-      = link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"
+  %iframe{:src => "http://www.youtube.com/embed/6vMO3XmNXe4",
+      :title => "YouTube video player"}
+
+%div.grid_5.push_1.landing-box
+
+  = render "shared/user_new"
 
 
 

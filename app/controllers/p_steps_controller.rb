@@ -22,6 +22,10 @@ class PStepsController < ApplicationController
     end
   end
 
+  def show
+    @p_step = PStep.find(params[:id])
+  end
+
   def destroy
     @p_step = PStep.find(params[:id])
     @p_step.destroy

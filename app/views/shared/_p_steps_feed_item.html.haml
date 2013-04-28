@@ -1,5 +1,5 @@
-%li
-  %span.content.bold= p_steps_feed_item.title
-  %span.content= p_steps_feed_item.content
-  %span= link_to "delete", p_step_path(p_steps_feed_item.id), method: :delete,
-  data: { confirm: "You sure?" }, title: p_steps_feed_item.title
+%article.steps-feed
+  %hgroup
+    %h1= link_to p_steps_feed_item.title, p_steps_feed_item
+  %p= p_steps_feed_item.content
+

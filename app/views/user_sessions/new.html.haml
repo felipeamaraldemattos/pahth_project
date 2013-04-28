@@ -1,23 +1,24 @@
 = provide(:title, "Log In")
 
 
-%h1 Log In
+= form_for @user_session do |f|
 
-%div.row
-  %div.span6.offset3
+  %fieldset.grid_4.push_4
 
-    = form_for @user_session do |f|
+    %legend Log In
 
-      = render 'shared/error_messages', object: f.object
+    = render 'shared/error_messages', object: f.object
 
-      %div
+    %section
+
+      %article
         = f.label :email
         = f.text_field :email
 
-      %div
+      %article
         = f.label :password
         = f.password_field :password
 
-      %div= f.submit "Submit", class: "btn btn-large btn-primary"
+      %article= f.submit "Submit", class: "btn-submit"
 
 

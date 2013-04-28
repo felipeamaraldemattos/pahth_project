@@ -15,4 +15,5 @@
 
   %div.half-split-right.semi-tall.top-margin
     %h3 Steps Feed
-    = render 'shared/p_steps_feed'
+    - if @p_steps_feed_items.any?
+      = render partial: 'shared/p_steps_feed_item', collection: @p_steps_feed_items

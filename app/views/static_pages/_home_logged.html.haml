@@ -1,8 +1,16 @@
 = provide(:title, current_user.name)
 
-%div.container
-    %h1 Suggested Paths
-    = render 'shared/pahths_feed'
+%section.grid_5.paths-suggested
+  %h1 Paths Suggested
+  - if @pahths_feed_items.any?
+    = render partial: 'shared/pahths_feed_item', collection: @pahths_feed_items
+
+%section.grid_3.steps-suggested
+  %h1 Steps Suggested
+  - if @p_steps_feed_items.any?
+    = render partial: 'shared/p_steps_feed_item', collection: @p_steps_feed_items
+
+%section.grid_2.to-dos= to_do_list
 
 
 

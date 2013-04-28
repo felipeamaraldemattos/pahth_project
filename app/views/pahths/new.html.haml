@@ -1,20 +1,29 @@
 = provide(:title, 'Create Pahth')
 
-%h1 Create Pahth
 
-%div.row
-  %div.span6.offset3
-    = form_for(@pahth) do |f|
 
-      = render 'shared/error_messages', object: f.object
+= form_for(@pahth) do |f|
 
-      = f.label :title
-      = f.text_field :title
+  %fieldset.grid_4
 
-      = f.label :type
-      = f.text_field :pahth_tipo
+    %legend Create Path
 
-      = f.label :description
-      = f.text_area :description, :rows => 5
+    = render 'shared/error_messages', object: f.object
 
-      = f.submit "Create Pahth", class: "btn btn-large btn-primary"
+    %section
+
+      %article
+        = f.label :title
+        = f.text_field :title
+
+      %article
+        = f.label :type
+        = f.text_field :pahth_tipo
+
+      %article
+        = f.label :description
+        = f.text_area :description, :rows => 5
+
+      %article= f.submit "Create Path", class: "btn btn-large btn-primary", :class => "btn-submit"
+
+%section.grid_2.push_4.to-dos= to_do_list

@@ -1,3 +1,12 @@
-%li
-  %span.content= link_to pahths_feed_item.title, pahths_feed_item
-  %span.content= pahths_feed_item.description
+%article.pahths-feed
+  %figure
+    = link_to image_tag("buda1.jpg"), pahths_feed_item
+  %hgroup
+    %h1
+      = link_to "#{pahths_feed_item.title} Path", pahths_feed_item
+    %h1
+      %i.grey-1.font-13
+        by
+        = link_to pahths_feed_item.user.name, pahths_feed_item.user, :class => "grey-1"
+    %h2= pahths_feed_item.pahth_tipo
+  %p= pahths_feed_item.description

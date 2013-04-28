@@ -1,13 +1,12 @@
-= provide(:title, 'Edit Profile')
+= provide(:title, 'Sign up')
+
+= form_for :user, :url => { :controller => "users",:action => "create" } do |f|
+
+  %fieldset
+
+    %legend Join Us
 
 
-= form_for(@user) do |f|
-
-  %fieldset.grid_4
-
-    %legend Update your profile
-
-    = render 'shared/error_messages', object: f.object
 
     %section
 
@@ -28,7 +27,7 @@
         = f.password_field :password_confirmation
 
       %article
-        = f.submit "Save changes", class: "btn-submit"
+        = f.submit "Create my account", class: "btn-submit"
 
-%section.grid_2.push_4.to-dos= to_do_list
+
 

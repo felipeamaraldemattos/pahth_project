@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
 
   def manage_pahths
-    @teaching_pahths_feed_items = current_user.pahths.all
+    @pahths_feed_items = current_user.pahths_user
   end
 
   private
