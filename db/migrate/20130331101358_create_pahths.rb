@@ -1,4 +1,4 @@
-[class CreatePahths < ActiveRecord::Migration
+class CreatePahths < ActiveRecord::Migration
   def self.up
     create_table :pahths do |t|
       t.string :title
@@ -11,7 +11,5 @@
     end
   end
 
-  def self.down
-    drop_table :pahths
-  end
+
 end
